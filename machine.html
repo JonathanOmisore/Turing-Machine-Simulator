@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turing Machine Simulator</title>
+</head>
+<body>
+    <h1>Turing Machine Simulation</h1>
+    <p>Tape: {{ tape }}</p>
+    <p>State: {{ state }}</p>
+    <p>Head Position: {{ head }}</p>
+    {% if finished %}
+    <p>The Turing machine has reached a final state.</p>
+    {% else %}
+    <form action="/step" method="post">
+        <button type="submit">Step</button>
+    </form>
+    {% endif %}
+</body>
+</html>

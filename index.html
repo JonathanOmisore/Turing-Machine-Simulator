@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turing Machine Simulator</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h1>Initialize Turing Machine</h1>
+    <form action="/initialize" method="post">
+        <label for="tape">Tape:</label>
+        <input type="text" id="tape" name="tape"><br>
+        <label for="initial_state">Initial State:</label>
+        <input type="text" id="initial_state" name="initial_state"><br>
+        <label for="final_states">Final States (comma separated):</label>
+        <input type="text" id="final_states" name="final_states"><br>
+        <label for="transition_function">Transition Function (format: current_state,input_symbol,new_state,new_symbol,direction):</label><br>
+        <textarea id="transition_function" name="transition_function" rows="10" cols="50"></textarea><br>
+        <button type="submit">Initialize</button>
+    </form>
+</body>
+</html>
